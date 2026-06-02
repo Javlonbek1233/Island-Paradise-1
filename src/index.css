@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Elegant Gold Palette mapped to #D4AF37 */
+  --color-gold-50: #faf8ec;
+  --color-gold-100: #f3ecce;
+  --color-gold-200: #e8da9d;
+  --color-gold-300: #dbc26c;
+  --color-gold-400: #cea244;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #ab8527;
+  --color-gold-700: #83601c;
+  --color-gold-800: #5d4215;
+  --color-gold-900: #412c0e;
+
+  /* Remapping Standard Amber to match #D4AF37 so all child elements auto-update */
+  --color-amber-50: #faf8ec;
+  --color-amber-100: #f3ecce;
+  --color-amber-200: #e8da9d;
+  --color-amber-300: #dbc26c;
+  --color-amber-400: #cea244;
+  --color-amber-500: #D4AF37;
+  --color-amber-600: #ab8527;
+  --color-amber-700: #83601c;
+  --color-amber-800: #5d4215;
+  --color-amber-900: #412c0e;
+  --color-amber-950: #1b1306;
+
+  /* Remapping Zinc colors to warm black, deep charcoal and paper white tones */
+  --color-zinc-50: #fbfbfb;
+  --color-zinc-100: #e0e0e0;
+  --color-zinc-200: #cccccc;
+  --color-zinc-300: #aaaaaa;
+  --color-zinc-400: #888888;
+  --color-zinc-500: #666666;
+  --color-zinc-600: #444444;
+  --color-zinc-700: #2a2825;
+  --color-zinc-800: #1a1918;
+  --color-zinc-900: #121110;
+  --color-zinc-950: #0a0908;
+  
+  --animate-shine: shine 3s infinite linear;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Medieval custom scrollbar matching editorial details */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0908;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2825;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Custom cinematic glow class */
+.gold-glow {
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.35));
+}
+
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background-image: linear-gradient(to bottom right, rgba(10, 9, 8, 0.93), rgba(26, 26, 26, 0.97));
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f3ecce 0%, #D4AF37 50%, #83601c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
